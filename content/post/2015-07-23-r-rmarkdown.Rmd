@@ -15,7 +15,7 @@ knitr::opts_chunk$set(collapse = TRUE)
 My abstract. we use @citetidyverse.
 
 # Part II. Introduction
-My intro
+My introduction
 
 # Part III. Data Introduction 
 Introduce the scenario and study objective.
