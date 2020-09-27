@@ -31,7 +31,6 @@ x <- as.numeric(table(data_male$`Age Group`))
 piepercent<- paste(round(100*x/sum(x),2))
 pie(x, labels = piepercent, main = "Age group of Male", col = rainbow(length(x)))
 legend("topright", c('20 and lower', '21 to 30', '31 to 40', '41 to 50', '51 to 60', '61 to 70', '71 to 80', '81 to 90', '91 and higher' ), fill = rainbow(length(x)), cex = 0.7)
-
 ```
 
 ```{r echo=TRUE}
@@ -45,7 +44,7 @@ legend("topright", c('20 and lower', '21 to 30', '31 to 40', '41 to 50', '51 to 
 
 # Part V. Analysis and Conclusion
 By looking at both graphs, it shows that for both male and female, people between the age of 21 to 30 years old have the largest percentage among the others. However, for the age of 91 and higher, there are more female getting infected than the same age of male. Another large percentage of cases for male is the age between 31 to 40. While for the female, the second largest group is age of 51 to 60. By comparing this, I can conclude that the average age of cases for female is older than the age of cases for male. 
-On the other side, for both male and female cases, most infected people are in prime of life, they are the main part of labor force. So in order to prevent the spread of COVID-19, the government made the quick decision to shut down the workplaces. What's more can be done is to encourage people to wear masks when going outside, also stay a safe distance of 2 meters from each other.
+On the other side, for both male and female cases, most infected people are in prime of life, they are the main part of labor force. So in order to prevent the spread of COVID-19, the government made the quick decision to shut down the workplaces. What's more can be done is to encourage people to wear masks when going outside, also maintain a safe distance of 2 meters apart from each other.
 
 
 # Reference
