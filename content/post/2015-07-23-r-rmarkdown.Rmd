@@ -20,15 +20,9 @@ I exact the data of all collected COVID-19 cases in city Toronto through the web
 
 # Part III. Data Introduction 
 The data we use today is collected since the first case has reported at January 2020, and all data is managed by Toronto Public Health. It has many different category such as age, gender, degree of infection etc. However, this data set might be differ from other as cases are extracted from different time and different sources.
-Firstly, let's take a look a the data in general.
-
-```{r echo=TRUE}
-glimpse(data)
-```
 
 # Part IV. Plots
 The first category I want to discover is called "Client Gender" and "Age Group". I want to know for different age group of male and female would have a vary degree of immunity for this virus. By doing this, I first classify the category of male and female, then under different gender, I use bar chart to analysis the several groups of ages.
-
 
 ```{r echo=TRUE}
 gender <- data$`Client Gender`
@@ -45,7 +39,7 @@ gender <- data$`Client Gender`
 data_male <- filter(data, gender=='FEMALE')
 x <- as.numeric(table(data_male$`Age Group`))
 piepercent<- paste(round(100*x/sum(x),2))
-pie(x, labels = piepercent, main = "Age group of Male", col = rainbow(length(x)))
+pie(x, labels = piepercent, main = "Age group of Female", col = rainbow(length(x)))
 legend("topright", c('20 and lower', '21 to 30', '31 to 40', '41 to 50', '51 to 60', '61 to 70', '71 to 80', '81 to 90', '91 and higher' ), fill = rainbow(length(x)), cex = 0.7)
 ```
 
