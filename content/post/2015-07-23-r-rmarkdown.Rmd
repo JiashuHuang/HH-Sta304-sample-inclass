@@ -1,5 +1,5 @@
 ---
-title: "Harry's thoughts on Covid-19"
+title: "Harry's thoughts on Covid-19 Virus"
 author: "Jiashu Huang"
 date: 2020-09-26T21:13:14-05:00
 bibliography: "reference.bib"
@@ -49,3 +49,4 @@ On the other side, for both male and female cases, most infected people are in p
 
 # Reference
 https://open.toronto.ca/dataset/covid-19-cases-in-toronto/
+https://baike.baidu.com/item/2019%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/24267858?fromtitle=%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92&fromid=24424810&fr=aladdin
