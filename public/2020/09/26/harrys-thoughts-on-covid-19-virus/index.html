@@ -1,12 +1,78 @@
----
-title: "Harry's thoughts on Covid-19 Virus"
-author: "Jiashu Huang"
-date: 2020-09-26T21:13:14-05:00
-bibliography: "reference.bib"
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
----
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
 
+
+<title>Harry&#39;s thoughts on Covid-19 Virus - Harry&#39;s inclass website</title>
+<meta property="og:title" content="Harry&#39;s thoughts on Covid-19 Virus - Harry&#39;s inclass website">
+
+
+  <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Harry&#39;s thoughts on Covid-19 Virus</h1>
+
+    
+    <span class="article-date">2020-09-26</span>
+    
+
+    <div class="article-content">
+      
 
 
 <div id="part-i.-abstraction" class="section level1">
@@ -31,14 +97,14 @@ x &lt;- as.numeric(table(data_male$`Age Group`))
 piepercent&lt;- paste(round(100*x/sum(x),2))
 pie(x, labels = piepercent, main = &quot;Age group of Male&quot;, col = rainbow(length(x)))
 legend(&quot;topright&quot;, c(&#39;20 and lower&#39;, &#39;21 to 30&#39;, &#39;31 to 40&#39;, &#39;41 to 50&#39;, &#39;51 to 60&#39;, &#39;61 to 70&#39;, &#39;71 to 80&#39;, &#39;81 to 90&#39;, &#39;91 and higher&#39; ), fill = rainbow(length(x)), cex = 0.7)</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code>gender &lt;- Covid19cases$`Client Gender`
 data_male &lt;- filter(data, gender==&#39;FEMALE&#39;)
 x &lt;- as.numeric(table(data_male$`Age Group`))
 piepercent&lt;- paste(round(100*x/sum(x),2))
 pie(x, labels = piepercent, main = &quot;Age group of Female&quot;, col = rainbow(length(x)))
 legend(&quot;topright&quot;, c(&#39;20 and lower&#39;, &#39;21 to 30&#39;, &#39;31 to 40&#39;, &#39;41 to 50&#39;, &#39;51 to 60&#39;, &#39;61 to 70&#39;, &#39;71 to 80&#39;, &#39;81 to 90&#39;, &#39;91 and higher&#39; ), fill = rainbow(length(x)), cex = 0.7)</code></pre>
-<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 <div id="part-v.-analysis-and-conclusion" class="section level1">
 <h1>Part V. Analysis and Conclusion</h1>
@@ -50,3 +116,47 @@ On the other side, for both male and female cases, most infected people are in p
 <p><a href="https://open.toronto.ca/dataset/covid-19-cases-in-toronto/" class="uri">https://open.toronto.ca/dataset/covid-19-cases-in-toronto/</a>
 <a href="https://baike.baidu.com/item/2019%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/24267858?fromtitle=%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92&amp;fromid=24424810&amp;fr=aladdin" class="uri">https://baike.baidu.com/item/2019%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/24267858?fromtitle=%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92&amp;fromid=24424810&amp;fr=aladdin</a></p>
 </div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="../../../../js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

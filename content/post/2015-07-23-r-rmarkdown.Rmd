@@ -11,6 +11,41 @@ tags: ["R Markdown", "plot", "regression"]
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
+```{r include=FALSE}
+
+library(opendatatoronto)
+
+library(dplyr)
+
+ 
+
+# get package
+
+package <- show_package("64b54586-6180-4485-83eb-81e8fae3b8fe")
+
+package
+
+ 
+
+# get all resources for this package
+
+resources <- list_package_resources("64b54586-6180-4485-83eb-81e8fae3b8fe")
+
+ 
+
+# identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources
+
+datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+
+ 
+
+# load the first datastore resource as a sample
+
+data <- filter(datastore_resources, row_number()==1) %>% get_resource()
+
+data
+```
+
 
 # Part I. Abstraction
 A new virus called COVID-19 is sweeping through countries around the world in 2020. It has high infectivity and high concealment, at the same time severely infected people can cause serious impact on the body and even death. Here, I'd like to start a series of investigations into this virus.
@@ -25,8 +60,9 @@ The data we use today is collected since the first case has reported at January 
 The first category I want to discover is called "Client Gender" and "Age Group". I want to know for different age group of male and female would have a vary degree of immunity for this virus. By doing this, I first classify the category of male and female, then under different gender, I use bar chart to analysis several groups of ages.
 
 ```{r echo=TRUE}
-gender <- data$`Client Gender`
-data_male <- filter(data, gender=='MALE')
+Covid19cases <- data
+gender <- Covid19cases$`Client Gender`
+data_male <- filter(Covid19cases, gender=='MALE')
 x <- as.numeric(table(data_male$`Age Group`))
 piepercent<- paste(round(100*x/sum(x),2))
 pie(x, labels = piepercent, main = "Age group of Male", col = rainbow(length(x)))
@@ -34,7 +70,7 @@ legend("topright", c('20 and lower', '21 to 30', '31 to 40', '41 to 50', '51 to 
 ```
 
 ```{r echo=TRUE}
-gender <- data$`Client Gender`
+gender <- Covid19cases$`Client Gender`
 data_male <- filter(data, gender=='FEMALE')
 x <- as.numeric(table(data_male$`Age Group`))
 piepercent<- paste(round(100*x/sum(x),2))
